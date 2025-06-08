@@ -1,3 +1,18 @@
+async function getRandomImage() {
+    const client_id = "PuJcecupmlXPeXLlOyG-gYngxBrz9Th0yS7aBZerzDk";
+    const endpoint = `https://api.unsplash.com/photos/random/?client_id=${client_id}`;
+    try {
+        const response = await fetch(endpoint);
+        const returnedData = await response.json()
+        console.log(returnedData)
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+getRandomImage();
+
+/*
 "use strict"
 
 const elements = {
@@ -36,3 +51,4 @@ function loopThroughQuotes() {
 }
 
 setTimeout(loopThroughQuotes, 3000);
+*/

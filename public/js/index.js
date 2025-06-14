@@ -7,15 +7,13 @@ async function getRandomImage() {
 
         const imgDiv = document.querySelector(".background-img");
         imgDiv.style.backgroundImage = `url(${receivedPhotoUrl})`;
-        imgDiv.style.backgroundSize = "cover";
-        imgDiv.style.backgroundPosition = "center";
-        imgDiv.style.backgroundRepeat = "no-repeat";
-
-        console.log("Background image set to:", receivedPhotoUrl);
     } catch (error) {
-        console.error("Error fetching image from backend:", error);
+        console.error(error);
     }
 }
+
+
+
 
 /* console.log("JS file loaded");
 
@@ -101,3 +99,5 @@ function loopThroughQuotes() {
 
 setTimeout(loopThroughQuotes, 3000);
 */
+
+getRandomImage()
